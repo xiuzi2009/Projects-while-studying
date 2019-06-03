@@ -16,4 +16,4 @@ for (toss= 0; toss < number_of_tosses; toss++)
 pi_estimate=4*number_in_circle/((float)number_of_tosses);
 /////////////////////////////////
 
-Use MARS to run the code, the result should be printed in run I/O.
+Use a assembly simulator (like the MARS) to run the code, the result should be printed in run I/O.
