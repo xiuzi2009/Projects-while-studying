@@ -1,4 +1,4 @@
-# Projects-while-studying-
+# Projects-while-studying
 It includes some codes when I studied computer engineering. Everyone can read, learn, download, share and modify the copies. Hopefully, they can bring inspiration for your designs.
 
 There is NO guarantee that the codes are functioning right or can attain expected goals.
