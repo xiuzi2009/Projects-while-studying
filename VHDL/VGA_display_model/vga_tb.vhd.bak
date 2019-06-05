@@ -1,0 +1,54 @@
+library ieee;
+use ieee.std_logic_1164.all;
+use ieee.std_logic_unsigned.all;
+use ieee.numeric_std.all;
+entity dff_hw_tb is
+end dff_hw_tb;
+architecture behavior of dff_hw_tb is
+-- Component Declaration for the Unit Under Test (UUT)
+component dff_hw
+port(
+clk : in std_logic;
+rst : in std_logic;
+d : in std_logic;
+q : out std_logic
+);
+end component;
+--Inputs
+signal dff_hw_tb_clk : std_logic := '0';
+signal dff_hw_tb_rst : std_logic := '0';
+signal dff_hw_tb_d : std_logic := '0';
+--Outputs
+signal dff_hw_tb_q : std_logic;
+-- Clock period definitions
+constant dff_hw_tb_clock_period : time := 10 ns;
+begin
+-- Instantiate the Unit Under Test (UUT)
+uut : dff_hw port map (
+clk => dff_hw_tb_clk,
+rst => dff_hw_tb_rst,
+d => dff_hw_tb_d,
+q => dff_hw_tb_q);
+-- Clock process definitions
+dff_hw_clock_process : process
+begin
+dff_hw_tb_clk <= '0';
+wait for dff_hw_tb_clock_period/2;
+dff_hw_tb_clk <= '1';
+wait for dff_hw_tb_clock_period/2;
+end process;
+-- Stimulus process
+stim_proc : process
+begin
+-- hold reset state for 100us.
+dff_hw_tb_rst <= '1';
+dff_hw_tb_d <= '0';
+wait for dff_hw_tb_clock_period*2;
+dff_hw_tb_rst <= '0';
+wait for dff_hw_tb_clock_period*1;
+dff_hw_tb_d <= '1';
+wait for dff_hw_tb_clock_period*1;
+dff_hw_tb_d <= '0';
+wait;
+end process;
+end;
