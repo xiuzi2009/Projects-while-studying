@@ -1,9 +1,10 @@
-OS:Window
+OS:Windows
 
 Description:
 This project comes from the "image_transport" but added acknowledge and checksum functions to enhance the stability of transportation.
-The acknowledge function can verified whether all the packages are received in order. The checksum function makes sure that all the packages
-are uncontaminated.
+The acknowledge function can verified whether all the packages are received in order. 
+The checksum function makes sure that all the packages are uncontaminated. 
+If something wrong happened, apply Go-back-N method to fix the problem.
 
 The server contains functions which can purposely cause error during transporting, and the client can choose to fix the error or not for
 verifying the working of acknowledge and checksum functions. 
