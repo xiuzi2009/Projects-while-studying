@@ -1,0 +1,30 @@
+OS:Window
+
+Description:
+This project comes from the "image_transport" but added acknowledge and checksum functions to enhance the stability of transportation.
+The acknowledge function can verified whether all the packages are received in order. The checksum function makes sure that all the packages
+are uncontaminated.
+
+The server contains functions which can purposely cause error during transporting, and the client can choose to fix the error or not for
+verifying the working of acknowledge and checksum functions. 
+
+Files included:
+Server.cpp   --Server sources file
+Client.cpp   --Client sources file
+test.jpeg    --Image file used for testing 
+
+About execution:
+1.Run Server.exe first. Normally, the screen should shows size of the image and shows the server has prepared.
+2.Choose transport mode:
+
+0 for no error, 
+1 for ack number error
+2 for checksum data error. 
+3 for ACK packet loss error
+4 for data packet loss error
+Opinion 1 to 4 will make server to cause error intentionally.They need to input accident rate at following specified position .
+
+3.Run Client.exe  And choose whether the rdt checking function is active. If it's active, it will fix server's errors. 
+If it's inactive, the errors will be kept in picture. 
+4.The server and client should start to transport packets and information during transporting.
+5.Finally, the Server and Client will end, press any key to exit. The image should show in client's folder. 
