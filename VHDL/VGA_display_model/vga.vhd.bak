@@ -1,0 +1,23 @@
+-- A library clause declares a name as a library.  It 
+-- does not create the library; it simply forward declares 
+-- it. 
+LIBRARY ieee; -- This will be in every design USE ieee.std_logic_arith.all; USE ieee.std_logic_1164.all;
+LIBRARY unisim; -- Xilinx’s component library USE unisim.Vcomponents.all;
+LIBRARY work; -- Custom Library USE work.all;
+
+ENTITY vga is PORT
+ (
+	clk  : IN STD_LOGIC; 
+	rst  : IN STD_LOGIC;
+	h_en : IN STD_LOGIC;
+	h_en_out : OUT STD_LOGIC;
+	v_en : IN STD_LOGIC;
+	v_en_out : OUT STD_LOGIC;
+	h_sync : OUT STD_LOGIC;
+	h_vid_out ： OUT STD_LOGIC;
+	h_CNT: OUT  STD_LOGIC_VECTOR(9 DOWNTO 0) := (OTHERS => '0'); 
+	v_sync : OUT STD_LOGIC;
+	v_vid_out ： OUT STD_LOGIC;
+	v_CNT: OUT  STD_LOGIC_VECTOR(9 DOWNTO 0) := (OTHERS => '0'); 
+ );
+END vga;
