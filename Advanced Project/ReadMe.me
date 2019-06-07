@@ -1,0 +1,16 @@
+OS: windows
+IDE: Modelsim
+
+Discription:
+The files in this repository are sources codes and supporting data for the Advanced Project: FPGA-Based Artificial Neural Network
+for Prediction Temperature from History Climate Records. 
+
+The project is to design a temperature forecast model with an ANN on an FPGA. It should have the ability to predict the highest and
+lowest temperature of a specific area at an assigned date. The ANN model has been built on an FPGA simulator(Modelsim) then trained by 
+1000 days of historical temperature data to get learned network. The project is written in Verilog and without auto-generated codes. It includes training and predicting functions, so the process of training and predicting can be done with Modelsim.
+
+The neural network is MLP design with 3 layers. It has only one node in output layer which is the predicted temperature, 4 nodes in input layer for provides 4 previous days temperature of the predicted day, one hidden layer with 8 nodes for intermediary calculating.
+
+File list:
+
+Execution:
