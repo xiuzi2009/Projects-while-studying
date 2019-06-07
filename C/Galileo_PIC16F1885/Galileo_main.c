@@ -1,4 +1,4 @@
-//Jingtian Li---Galileo and Pic16f18855. This code is for Galileo. Need to run Yocuto system first 
+//Galileo and Pic16f18855. This code is for Galileo. Need to run Yocuto system first 
 //Galileo works on 3.3v, Pic on 5v
 //Details on Lab2 Direction -micprocessor 2 summer verson.
 #include <stdlib.h>
