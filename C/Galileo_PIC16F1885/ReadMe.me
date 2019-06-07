@@ -1,0 +1,22 @@
+Microcontroller: 
+Intel Galileo Gen 2, Microchip PIC16F18855
+
+OS: Windows and Linux
+
+Description:
+The codes build a communication route between Galileo and PIC16F18855. The microcontroller can read the analog information 
+from a photoresistor,then send the information to Galileo via I/O pin. 
+The PIC16F18855 needs the support of programmer PICkit3 and IDE MPLAB.
+Galileo need a SD card which includes a Linux image for bootup, for example Yocto.
+The PC needs Putty to communicate with Galileo.
+
+Connection:
+RA2--PIN4
+RC2--PIN7
+RC3--PIN8
+RC4--PIN9
+RC5--PIN10
+
+Execution:
+1. Build the circuit and run the codes.
+2. The Galileo_main.c will ask what it should do next. 1 for verifying the connection, 2 for read value from pic, 0 for exit.
