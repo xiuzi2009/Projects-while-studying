@@ -1,4 +1,4 @@
-OS: windows
+OS: Windows
 IDE: Modelsim
 
 Discription:
@@ -27,9 +27,15 @@ ANN_fullyear_Tmax_prediction_tb.v
 ANN_fullyear_Tmix_prediction_tb.v    --These two testbenches can calucate the required temperature without updating the weights, in other 
                                         words leaving the weights unchanged.
 Tmax_history_records.zip
-Tmix_history_records.zip             --They are the data packages which contain temperature data used for training. The temperature data has 
-                                        been converted to Kelvin then to hexadecimal numbers.
+Tmix_history_records.zip             --They are the data packages which contain temperature data used for training. The temperature data 
+                                       has been converted to Kelvin then to hexadecimal numbers.
 Weights_TMAX.zip
 Weights_TMIN.zip                     --They are the stored weights of the neuron network.
 
 Execution:
+The project needs "ANN+histroy_records+Weights+one of the testbenches" to complete once running. The testbenches decide the behaviors of
+the ANN. So before running project, you need:
+1. Build a project and add ANN.v, Prediction.txt and testbenches you want to the project.
+2. Unzip zip files to the project folder
+3. Make temperature data files like the files in *_history_records.zip, or unzip the zip files to the project folder.
+4. Modify the testbench files, for example file names,  to be suitable for your data files.
