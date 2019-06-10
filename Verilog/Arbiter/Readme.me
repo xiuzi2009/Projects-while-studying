@@ -1,1 +1,9 @@
+OS: Windows
+IDE:Modelsim
 
+Description:
+The arbiter is designed for receiving 4 clients which share a same bus. It has 4 inputs Req0. Req1, Req2 and Req3. Also, it has 4 outputs
+Gnt0, Gnt1, Gnt2 and Gnt3. All clients are equal and utilizing rotating rule to share the bus. The arbiter and clients are synchronous to
+the rising edge of clock. Each requirement from the client can get grant for 8 clock cycles. At the 9th cycle, the arbiter will set the Gnt 
+to low. Once the client recieve the grant, it will set low with its requiring pin until the grant is set low by the arbiter. If the client
+still needs to use the bus, it needs to reset the requiring pin to high. 
