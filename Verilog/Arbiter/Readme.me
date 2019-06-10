@@ -7,3 +7,7 @@ Gnt0, Gnt1, Gnt2 and Gnt3. All clients are equal and utilizing rotating rule to 
 the rising edge of clock. Each requirement from the client can get grant for 8 clock cycles. At the 9th cycle, the arbiter will set the Gnt 
 to low. Once the client recieve the grant, it will set low with its requiring pin until the grant is set low by the arbiter. If the client
 still needs to use the bus, it needs to reset the requiring pin to high. 
+
+Files:
+Arb.v      --The model of arbiter.
+Arb_tb.v   --The testbench provides 4 clients and randomly requires the grants for testing.
